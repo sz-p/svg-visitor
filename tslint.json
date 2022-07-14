@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "tslint:latest"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "src/lib/**/*.js",
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js",
+      "src/registerServiceWorker.ts"
+    ]
+  },
+  "rules": {
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "trailing-comma": [
+      true,
+      "never"
+    ],
+    "no-console": {
+      "severity": "warning",
+      "options": [
+        true,
+        "debug",
+        "info",
+        "log",
+        "time",
+        "timeEnd",
+        "trace"
+      ]
+    }
+  }
+}

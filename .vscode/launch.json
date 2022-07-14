@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "launch",
+      "type": "node",
+      "request": "launch",
+      "outFiles": [
+        "${workspaceRoot}/dist/src/index.js",
+        "${workspaceRoot}/dist/src/index.js.map",
+      ],
+      "program": "${workspaceRoot}/src/index.ts",
+      "args": [],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector"
+    }
+  ]
+}

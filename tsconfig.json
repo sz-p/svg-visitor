@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "removeComments":true,
+    "pretty":true, 
+    "declaration":true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts",
+    "test",
+    "jest.config.js",
+    "dist",
+    "example"
+  ],
+  "typeRoots": [
+    "node_modules/@types"
+  ]
+}

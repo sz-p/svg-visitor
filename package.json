@@ -1,0 +1,38 @@
+{
+  "name": "svg-visitor",
+  "version": "0.1.0",
+  "description": "A library for javascript to check value is equal or not with the definition",
+  "main": "./dist/src/index.js",
+  "author": "sz-p <sz_p@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/sz-p/svg-visitor",
+  "bugs": "https://github.com/sz-p/svg-visitor/issues",
+  "dependencies": {},
+  "keywords": [
+    "svg-visitor",
+    "svg",
+    "visitor"
+  ],
+  "files": [
+    "dist/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sz-p/svg-visitor"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/jsdom": "^16.2.14",
+    "dom-parser": "^0.1.6",
+    "jest": "^24.5.0",
+    "jsdom": "^20.0.0",
+    "ts-jest": "^24.0.0",
+    "tslib": "^2.4.0",
+    "typescript": "^3.0.3"
+  }
+}
