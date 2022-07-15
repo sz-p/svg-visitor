@@ -1,7 +1,7 @@
 {
   "name": "svg-visitor",
   "version": "0.1.0",
-  "description": "A library for javascript to check value is equal or not with the definition",
+  "description": "visit svg element use visitor pattern",
   "main": "./dist/src/index.js",
   "author": "sz-p <sz_p@outlook.com>",
   "license": "MIT",
@@ -23,6 +23,7 @@
     "url": "git://github.com/sz-p/svg-visitor"
   },
   "scripts": {
+    "prepublishOnly": "yarn test",
     "test": "jest"
   },
   "devDependencies": {
