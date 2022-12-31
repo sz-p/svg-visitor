@@ -3,11 +3,13 @@ import { svgVisitor } from '../../src/index';
 import { resolve } from "path";
 import { readFileSync } from 'fs'
 import { JSDOM } from "jsdom";
-const testName = 'svgVisitor'
-const svgString = readFileSync(resolve(__dirname, "./svg/src.svg")).toString()
-const svgStringShouldBe = readFileSync(resolve(__dirname, "./svg/shouldBe.svg")).toString()
-test(testName, () => {
-  const dom = new JSDOM(svgString)
+const rectVisitorSvgString = readFileSync(resolve(__dirname, "./svg/rect-visitor-svg-src.svg")).toString()
+const rectVisitorSvgStringShouldBe = readFileSync(resolve(__dirname, "./svg/rect-visitor-svg-should-be.svg")).toString()
+
+const visitorSvgString = readFileSync(resolve(__dirname, "./svg/visitor-svg.svg")).toString()
+
+test('rectVisitor', () => {
+  const dom = new JSDOM(rectVisitorSvgString)
   const parsedSvgDom = dom.window.document.getElementsByTagName('svg')
   if (!parsedSvgDom || !parsedSvgDom[0]) return
   const svgDom = parsedSvgDom[0]
@@ -19,5 +21,19 @@ test(testName, () => {
       }
     }
   })
-  expect(svgDom.outerHTML).toBe(svgStringShouldBe);
+  expect(svgDom.outerHTML).toBe(rectVisitorSvgStringShouldBe);
+})
+
+test('visitor', () => {
+  const dom = new JSDOM(visitorSvgString)
+  const parsedSvgDom = dom.window.document.getElementsByTagName('svg')
+  if (!parsedSvgDom || !parsedSvgDom[0]) return
+  const svgDom = parsedSvgDom[0]
+  let itemCount = 0
+  svgVisitor(svgDom as unknown as SVGElement, {
+    visitor: function (rectDom: Element) {
+      itemCount++
+    }
+  })
+  expect(itemCount).toBe(4);
 })
