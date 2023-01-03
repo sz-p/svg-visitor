@@ -1,6 +1,6 @@
 {
   "name": "svg-visitor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "visit svg element use visitor pattern",
   "main": "./dist/src/index.js",
   "author": "sz-p <sz_p@outlook.com>",
@@ -16,6 +16,7 @@
   "files": [
     "dist/*",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "repository": {
@@ -24,11 +25,13 @@
   },
   "scripts": {
     "prepublishOnly": "yarn test",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "@types/jsdom": "^16.2.14",
+    "conventional-changelog-cli": "^2.2.2",
     "dom-parser": "^0.1.6",
     "jest": "^24.5.0",
     "jsdom": "^20.0.0",
