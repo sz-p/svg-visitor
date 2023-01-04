@@ -1,6 +1,6 @@
 {
   "name": "svg-visitor",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "visit svg element use visitor pattern",
   "main": "./dist/src/index.js",
   "author": "sz-p <sz_p@outlook.com>",
